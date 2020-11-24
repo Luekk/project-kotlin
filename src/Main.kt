@@ -8,6 +8,8 @@ fun main(args: Array<String>){
    // println("Program o tablicach! Kliknij enter aby kontynuować!")
     //readLine()
     //tablice()
+
+    // wyżej gotowe ale wyłączone //
     petle()
 }
 fun wizytowka(){
