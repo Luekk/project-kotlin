@@ -1,15 +1,13 @@
 import java.util.*
-import java.lang.*
 
 fun main(args: Array<String>){
-   // println("Witaj w moim programie! Kliknij enter aby przejść dalej!")
-   // readLine()
-   // wizytowka()
-   // println("Program o tablicach! Kliknij enter aby kontynuować!")
+    //println("Witaj w moim programie! Kliknij enter aby przejść dalej!")
+    //readLine()
+    //wizytowka()
+    //println("Program o tablicach! Kliknij enter aby kontynuować!")
     //readLine()
     //tablice()
-
-    // wyżej gotowe ale wyłączone //
+    // wyżej gotowe //
     petle()
 }
 fun wizytowka(){
