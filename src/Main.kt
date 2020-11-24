@@ -2,10 +2,13 @@ import java.util.*
 import java.lang.*
 
 fun main(args: Array<String>){
-    //println("Witaj w moim programie! Kliknij enter aby przejść dalej!")
+   // println("Witaj w moim programie! Kliknij enter aby przejść dalej!")
+   // readLine()
+   // wizytowka()
+   // println("Program o tablicach! Kliknij enter aby kontynuować!")
     //readLine()
-    //wizytowka()
-    tablice()
+    //tablice()
+    petle()
 }
 fun wizytowka(){
     println("Chcesz mnie poznac? (y/n)")
@@ -48,9 +51,7 @@ fun tablice(){
     var tabSum2 = 0
     val table = arrayOf(1,2,3,4,5)
     val table2 = listOf(9,8,7,4,2,5,6)
-
     println("Mamy dwie tablice ${table.asList()} $table2")
-
     println("Co chciałbyś zrobić? Mnożyć dzielić a może odejmować i dodawać?")
     readLine()
     println("Wpisz znak + - * lub / aby wykonać działanie na tablicach")
@@ -92,23 +93,23 @@ fun tablice(){
     println()
     println("W sumie może chcesz zobaczyc pojedyncze sumy tablic?(true/false)")
     scanningsum = scansum.nextBoolean()
-    while(true){
+    if(scanningsum == true){
         println("Które tablice chcesz zobaczyć? 1 czy 2?")
         val scanTable = Scanner(System.`in`)
         var scanningTable = 0
         scanningTable = scanTable.nextInt()
         if(scanningTable == 1){
             println(tabSum)
-            break
         } else if(scanningTable == 2){
             println(tabSum2)
-            break
         } else{
             println("---------------------")
             println("Podałeś złą liczbe!")
             println("Wpisz liczbę odpowiadającą tablicy... 1 albo 2")
             println("---------------------")
         }
+    } else {
+        println("OK")
     }
     val scanner = Scanner(System.`in`)
     var scan: Boolean? = true
@@ -119,9 +120,6 @@ fun tablice(){
     }else{
         println("OK")
     }
-
-
-
     val scanoutput = Scanner(System.`in`)
     var scanning: Boolean? = true
     println("Czy chcesz zrobic coś jeszcze przy tablicach? (true/false)")
@@ -131,4 +129,24 @@ fun tablice(){
     } else{
         println("OK")
     }
+}
+fun petle(){
+    println("--Pętle--")
+    println("Mamy różne rodzaje pętli while, if, else if...")
+    println("Przykładowo poniżej wpisz liczbe a wyświetli się ona 5 razy i o jedna liczba wyżej")
+    val scanner = Scanner(System.`in`)
+    var scanNum = 0
+    scanNum = scanner.nextInt()
+    for(i in 0..4){
+        println(scanNum+i)
+    }
+    println("Można również wypisywać losowe liczby... Kliknij Enter aby kontynuować")
+    readLine()
+    println()
+    print("Wpisz iloczyn liczby: ")
+    var scanTimes = 0
+    scanTimes = scanner.nextInt()
+    val random = Math.random()*100.toInt()*scanTimes
+    println(random.toInt())
+
 }
