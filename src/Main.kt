@@ -145,7 +145,7 @@ fun petle(){
     println("Można również wypisywać losowe liczby... Kliknij Enter aby kontynuować")
     readLine()
     println()
-    print("Wpisz iloczyn liczby any zwiększyć ją x razy: ")
+    print("Wpisz iloczyn liczby aby zwiększyć ją x razy: ")
     var scanTimes = 0
     scanTimes = scanner.nextInt()
     for(i in 0..100){
