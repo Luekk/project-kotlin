@@ -2,10 +2,16 @@ import java.util.*
 import java.lang.*
 
 fun main(args: Array<String>){
-    println("Witaj w moim programie! Kliknij enter aby przejść dalej!")
-    readLine()
-    wizytowka()
-    tabliczki()
+    //println("Witaj w moim programie! Kliknij enter aby przejść dalej!")
+    //readLine()
+    //wizytowka()
+    //tablice()
+
+    val scanner = Scanner(System.`in`)
+    var a: Boolean? = true
+    a = scanner.nextBoolean()
+
+    println(a)
 }
 fun wizytowka(){
     println("Chcesz mnie poznac? (y/n)")
@@ -42,7 +48,7 @@ fun wizytowka(){
         }
     }
 }
-fun tabliczki(){
+fun tablice(){
     println("-------Tablice-------")
     var tabSum = 0
     var tabSum2 = 0
@@ -75,6 +81,8 @@ fun tabliczki(){
             println("${table[i]/table2[i]} to iloraz ${i+1} elementu tablic")
         }
     }
+    println("------------------------------------")
+    println()
     println("A może by tak zsumować całe tablice?")
     for(i in 0..table.size - 1){
         tabSum += table[i]
