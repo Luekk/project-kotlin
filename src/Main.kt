@@ -133,18 +133,19 @@ fun tablice(){
 fun petle(){
     println("--Pętle--")
     println("Mamy różne rodzaje pętli...")
-    println("Przykładowo poniżej wpisz liczbe a wyświetli się ona 5 razy i o jedna liczba wyżej")
+    println()
+    print("Przykładowo wpisz liczbe a wyświetli się ona 5 razy i o jedna liczba wyżej")
     val scanner = Scanner(System.`in`)
     var scanNum = 0
     scanNum = scanner.nextInt()
     for(i in 0..4){
-        println(scanNum+i)
+        println(scanNum+1+i)
     }
     println()
     println("Można również wypisywać losowe liczby... Kliknij Enter aby kontynuować")
     readLine()
     println()
-    print("Wpisz iloczyn liczby: ")
+    print("Wpisz iloczyn liczby any zwiększyć ją x razy: ")
     var scanTimes = 0
     scanTimes = scanner.nextInt()
     for(i in 0..100){
