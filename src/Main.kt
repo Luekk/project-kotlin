@@ -132,7 +132,7 @@ fun tablice(){
 }
 fun petle(){
     println("--Pętle--")
-    println("Mamy różne rodzaje pętli while, if, else if...")
+    println("Mamy różne rodzaje pętli...")
     println("Przykładowo poniżej wpisz liczbe a wyświetli się ona 5 razy i o jedna liczba wyżej")
     val scanner = Scanner(System.`in`)
     var scanNum = 0
@@ -140,13 +140,16 @@ fun petle(){
     for(i in 0..4){
         println(scanNum+i)
     }
+    println()
     println("Można również wypisywać losowe liczby... Kliknij Enter aby kontynuować")
     readLine()
     println()
     print("Wpisz iloczyn liczby: ")
     var scanTimes = 0
     scanTimes = scanner.nextInt()
-    val random = Math.random()*100.toInt()*scanTimes
-    println(random.toInt())
+    for(i in 0..100){
+        val random = Math.random()*100.toInt()*scanTimes
+        println(""+random.toInt()+" ")
+    }
 
 }
