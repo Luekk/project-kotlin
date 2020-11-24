@@ -5,13 +5,7 @@ fun main(args: Array<String>){
     //println("Witaj w moim programie! Kliknij enter aby przejść dalej!")
     //readLine()
     //wizytowka()
-    //tablice()
-
-    val scanner = Scanner(System.`in`)
-    var a: Boolean? = true
-    a = scanner.nextBoolean()
-
-    println(a)
+    tablice()
 }
 fun wizytowka(){
     println("Chcesz mnie poznac? (y/n)")
@@ -53,7 +47,7 @@ fun tablice(){
     var tabSum = 0
     var tabSum2 = 0
     val table = arrayOf(1,2,3,4,5)
-    val table2 = listOf(9,8,7,4,2)
+    val table2 = listOf(9,8,7,4,2,5,6)
 
     println("Mamy dwie tablice ${table.asList()} $table2")
 
@@ -87,8 +81,54 @@ fun tablice(){
     for(i in 0..table.size - 1){
         tabSum += table[i]
     }
-    for(i in 0..table.size - 1){
+    for(i in 0..table2.size - 1){
         tabSum2 += table2[i]
     }
-    println(tabSum+tabSum2)
+    println("Suma wszystkich elementów obydwóch tablic: ${tabSum+tabSum2}")
+    println()
+    println("------------------------------------")
+    val scansum = Scanner(System.`in`)
+    var scanningsum: Boolean? = true
+    println()
+    println("W sumie może chcesz zobaczyc pojedyncze sumy tablic?(true/false)")
+    scanningsum = scansum.nextBoolean()
+    while(true){
+        println("Które tablice chcesz zobaczyć? 1 czy 2?")
+        val scanTable = Scanner(System.`in`)
+        var scanningTable = 0
+        scanningTable = scanTable.nextInt()
+        if(scanningTable == 1){
+            println(tabSum)
+            break
+        } else if(scanningTable == 2){
+            println(tabSum2)
+            break
+        } else{
+            println("---------------------")
+            println("Podałeś złą liczbe!")
+            println("Wpisz liczbę odpowiadającą tablicy... 1 albo 2")
+            println("---------------------")
+        }
+    }
+    val scanner = Scanner(System.`in`)
+    var scan: Boolean? = true
+    println("A może tak rozmiary tablic? true/false")
+    scan = scanner.nextBoolean()
+    if(scan === true){
+        println("Tablica 1 zawiera ${table.size} elementów a tablica 2 zawiera ${table2.size} elementów")
+    }else{
+        println("OK")
+    }
+
+
+
+    val scanoutput = Scanner(System.`in`)
+    var scanning: Boolean? = true
+    println("Czy chcesz zrobic coś jeszcze przy tablicach? (true/false)")
+    scanning = scanoutput.nextBoolean()
+    if(scanning == true){
+        tablice()
+    } else{
+        println("OK")
+    }
 }
