@@ -2,27 +2,10 @@ import java.util.*
 import java.lang.*
 
 fun main(args: Array<String>){
-   // println("Witaj w moim programie! Kliknij enter aby przejść dalej!")
-   // readLine()
-    //wizytowka()
-    //tabliczki()
-
-    println("co chcesz zrobic? (true/false)")
-
-    var scanner = Scanner(System.`in`)
-    var a = 0
-    a = scanner.nextInt()
-    var b = false
-    if(a!=0){
-        b = true
-    }
-    println(scanner)
-
-    while(true){
-        println("xD")
-    }
-
-
+    println("Witaj w moim programie! Kliknij enter aby przejść dalej!")
+    readLine()
+    wizytowka()
+    tabliczki()
 }
 fun wizytowka(){
     println("Chcesz mnie poznac? (y/n)")
