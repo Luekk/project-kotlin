@@ -1,13 +1,12 @@
 import java.util.*
 
 fun main(args: Array<String>){
-    //println("Witaj w moim programie! Kliknij enter aby przejść dalej!")
-    //readLine()
-    //wizytowka()
-    //println("Program o tablicach! Kliknij enter aby kontynuować!")
-    //readLine()
-    //tablice()
-    // wyżej gotowe //
+    println("Witaj w moim programie! Kliknij enter aby przejść dalej!")
+    readLine()
+    wizytowka()
+    println("Program o tablicach! Kliknij enter aby kontynuować!")
+    readLine()
+    tablice()
     petle()
 }
 fun wizytowka(){
@@ -144,13 +143,66 @@ fun petle(){
     println()
     println("Można również wypisywać losowe liczby... Kliknij Enter aby kontynuować")
     readLine()
+    for(i in 0..11){
+        print(""+(Math.random()*100).toInt()+", ")
+    }
     println()
+    println("Sam zadecyduj ile razy ma się powiększyc!")
     print("Wpisz iloczyn liczby aby zwiększyć ją x razy: ")
     var scanTimes = 0
     scanTimes = scanner.nextInt()
-    for(i in 0..100){
+    for(i in 0..40){
         val random = Math.random()*100.toInt()*scanTimes
         println(""+random.toInt()+" ")
     }
-
+    println("----------------------")
+    println("Kliknij Enter")
+    println("----------------------")
+    readLine()
+    println("Wpisz true jeżeli chcesz zobaczyć pętle,")
+    println("lub wpisz false aby zachować ją w tajemnicy")
+    var trueOrNot: Boolean? = true
+    trueOrNot = scanner.nextBoolean()
+    while(true){
+        whileLoop()
+        break
+    }
+    println("KONIEC PROGRAMU")
+}
+fun whileLoop(){
+    var iterator = 0
+    val a = 3
+    var b = 4
+    val scanner = Scanner(System.`in`)
+    var trueOrNot: Boolean? = true
+    println("Wartość liczby A jest równa $a")
+    println("Wartość liczby B jest równa $b")
+    println("Masz możliwość zmiany wartości liczby B. Czy chcesz ją zmienić? (true/false)")
+    trueOrNot = scanner.nextBoolean()
+    while(true){
+        println("Wpisz nową liczbę:")
+        b = scanner.nextInt()
+        println("Nowa wartość liczby B wynosi: $b.")
+        println("Pętla którą teraz zobaczysz pododaje oraz pomnoży obydwie liczby przez losowo wygenerowaną od 1 do 10 liczbe 4 razy w pętli która odtworzy się 3 razy.")
+        println("Kliknij Enter aby zobaczyć pętle!")
+        break
+    }
+    readLine()
+    println("---------------------")
+    while(iterator < 3){
+        for(i in 0..4){
+            println("Wynik dodawania liczby A to: ${a+(Math.random()*10).toInt()}")
+        }
+        for(i in 0..4){
+            println("Wynik mnożenia liczby A to: ${a*(Math.random()*10).toInt()}")
+        }
+        for(i in 0..4){
+            println("Wynik dodawania liczby B to: ${b+(Math.random()*10).toInt()}")
+        }
+        for(i in 0..4){
+            println("Wynik mnożenia liczby B to: ${b*(Math.random()*10).toInt()}")
+        }
+        iterator++
+    }
+    println("---------------------")
 }
