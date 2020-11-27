@@ -167,6 +167,13 @@ fun petle(){
         whileLoop()
         break
     }
+    val first = 10
+    val second = 3
+    println("Dwie liczby $first i $second w pętli for dodawanie +1")
+    readLine()
+    for(i in 0..10){
+        println("Suma dwóch liczb jest równa ${first+second+i}")
+    }
     println("KONIEC PROGRAMU")
 }
 fun whileLoop(){
