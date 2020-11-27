@@ -67,7 +67,7 @@ fun tablice(){
     }
     if(znak == "*") {
         for (i in 0..table.size - 1) {
-            println("${table[i]*table2[i]} to iloczyn ${i + 1} elementu tablic")
+            println("${table[i]*table2[i]} to iloczyn ${i+1} elementu tablic")
         }
     }
     if(znak == "/") {
