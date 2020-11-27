@@ -169,7 +169,7 @@ fun petle(){
     }
     val first = 10
     val second = 3
-    println("Dwie liczby $first i $second w pętli for dodawanie +1")
+    println("Dwie liczby $first i $second w pętli for (dodawanie +1)")
     readLine()
     for(i in 0..10){
         println("Suma dwóch liczb jest równa ${first+second+i}")
@@ -181,7 +181,7 @@ fun whileLoop(){
     val a = 3
     var b = 4
     val scanner = Scanner(System.`in`)
-    var trueOrNot: Boolean? = true
+    var trueOrNot: Boolean? = false
     println("Wartość liczby A jest równa $a")
     println("Wartość liczby B jest równa $b")
     println("Masz możliwość zmiany wartości liczby B. Czy chcesz ją zmienić? (true/false)")
